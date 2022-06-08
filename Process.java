@@ -1,11 +1,13 @@
 public class Process {
    private Status status;
    private String canceledReason;
+   private User canceledBy;
 
    // process logic here...
 
-   public void cancel(String reason) {
+   public void cancel(String reason, User user) {
       this.status = Status.CANCELED;
       this.canceledReason = this.reason;
+      this.canceledBy = this.user;
    }
 }
