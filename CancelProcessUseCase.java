@@ -6,7 +6,7 @@ public class CancelProcessUseCase {
    }
 
    public void execute(int processId, String reason) {
-      Process process = this.processRepository.getProcessById(processId);        
+      Process process = this.processRepository.getProcessById(processId);
       process.cancel(reason);
       this.processRepository.save(process);
    }
