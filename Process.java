@@ -1,3 +1,11 @@
 public class Process {
-   // process logic will go here
+   private Status status;
+   private String canceledReason;
+
+   // process logic here...
+
+   public void cancel(String reason) {
+      this.status = Status.CANCELED;
+      this.canceledReason = this.reason;
+   }
 }
